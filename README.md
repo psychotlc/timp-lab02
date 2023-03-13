@@ -37,4 +37,46 @@ git checkout -b patch1
 
 3)commit, push локальную ветку в удалённый репозиторий.
 
+git commit -m "Removed using namespace"
+git push -u origin patch1
+
+4)Проверьте, что ветка patch1 доступна в удалёный репозитории.
+
+git remote
+
+5)Создайте pull-request patch1 -> master
+
+6)В локальной копии в ветке patch1 добавьте в исходный код комментарии.
+
+7)commit, push
+
+8)Проверьте, что новые изменения есть в созданном на шаге 5 pull-request
+
+9)В удалённый репозитории выполните слияние PR patch1 -> master и удалите ветку patch1 в удаленном репозитории.
+
+git checkout master
+git merge patch1
+git branch -D patch1
+
+10)Локально выполните pull.
+
+git pull
+
+11)С помощью команды git log просмотрите историю в локальной версии ветки master
+
+git log
+
+12)Удалите локальную ветку patch1
+
+PART3
+
+1)Создайте новую локальную ветку patch2
+
+git checkout -b patch2
+
+2)Измените code style с помощью утилиты clang-format. Например, используя опцию -style=Mozilla
+
+clang-format -style=Mozilla hello_world.cpp
+
+3)commit, push, создайте pull-request patch2 -> master
 
