@@ -3,8 +3,8 @@
 
 int main(){
     std::string name;
-    std::cout << "Enter name: "; //Введите имя
+    std::cout << "Enter name: "; 
     std::cin >> name; 
-    std::cout<<"Hello world " << name << std::endl; //Выводит привет
+    std::cout<<"Hello world " << name << std::endl; 
     return 0;
 } 
